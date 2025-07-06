@@ -21,6 +21,7 @@ const Permisos = () => {
   const [isModuloModalOpen, setIsModuloModalOpen] = useState(false);
   const [editingId, setEditingId] = useState<number | null>(null);
   const [formData, setFormData] = useState<Record<string, any>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
     
   const renderModulo = (modulo_id: Array<number | Modulo> | number | Modulo) => {
     if (Array.isArray(modulo_id)) {
@@ -132,7 +133,16 @@ const Permisos = () => {
   ];
 
   const handleSubmit = async (values: Record<string, any>) => {
+    // Prevenir múltiples envíos
+    if (isSubmitting) {
+      console.log('Formulario ya se está enviando, ignorando envío duplicado');
+      return;
+    }
+
     try {
+      setIsSubmitting(true);
+      console.log('Iniciando envío del formulario con valores:', values);
+      
       // Convertir los IDs de módulos a números
       const modulo_ids = Array.isArray(values.modulo_id) 
         ? values.modulo_id.map((id: string) => parseInt(id, 10))
@@ -191,6 +201,8 @@ const Permisos = () => {
     } catch (error) {
       console.error('Error al guardar el permiso:', error);
       showErrorToast('Error al guardar el permiso');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -212,6 +224,7 @@ const Permisos = () => {
   const handleCreate = () => {
     setFormData({});
     setEditingId(null);
+    setIsSubmitting(false);
     setIsModalOpen(true);
   };
 
@@ -242,6 +255,7 @@ const Permisos = () => {
       puede_eliminar: permiso.puede_eliminar || false
     });
     setEditingId(permiso.id_permiso);
+    setIsSubmitting(false);
     setIsModalOpen(true);
   };
 
@@ -299,9 +313,10 @@ const Permisos = () => {
                   <Form
                     fields={formFields}
                     onSubmit={handleSubmit}
-                    buttonText={editingId ? "Actualizar" : "Crear"}
+                    buttonText={isSubmitting ? "Procesando..." : (editingId ? "Actualizar" : "Crear")}
                     initialValues={formData}
                     schema={permisoSchema}
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>

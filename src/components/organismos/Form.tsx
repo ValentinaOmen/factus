@@ -27,9 +27,10 @@ interface FormProps {
   buttonText?: string;
   initialValues?: Record<string, any>;
   schema?: any;
+  disabled?: boolean;
 }
 
-const Form = ({ fields, onSubmit, buttonText = "Enviar", initialValues = {}, schema }: FormProps) => {
+const Form = ({ fields, onSubmit, buttonText = "Enviar", initialValues = {}, schema, disabled = false }: FormProps) => {
   const {
     register,
     handleSubmit,
@@ -102,9 +103,22 @@ const Form = ({ fields, onSubmit, buttonText = "Enviar", initialValues = {}, sch
                 <div className="mt-1">
                   <Toggle
                     isOn={watchAllFields[field.key] === true || watchAllFields[field.key] === 'true'}
-                    onToggle={() => {
+                    onToggle={(e) => {
+                      // Prevenir que el evento se propague y cause behaviors no deseados
+                      if (e && e.preventDefault) {
+                        e.preventDefault();
+                      }
+                      if (e && e.stopPropagation) {
+                        e.stopPropagation();
+                      }
+                      
                       const newValue = !(watchAllFields[field.key] === true || watchAllFields[field.key] === 'true');
                       setValue(field.key, newValue);
+                      
+                      // Ejecutar onChange personalizado si existe
+                      if (field.onChange) {
+                        field.onChange(newValue);
+                      }
                     }}
                   />
                 </div>
@@ -137,7 +151,12 @@ const Form = ({ fields, onSubmit, buttonText = "Enviar", initialValues = {}, sch
       <div className="flex justify-end mt-4">
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"
+          disabled={disabled}
+          className={`px-4 py-2 rounded-md transition-colors ${
+            disabled 
+              ? 'bg-gray-400 cursor-not-allowed text-gray-200' 
+              : 'bg-blue-500 hover:bg-blue-600 text-white'
+          }`}
         >
           {buttonText}
         </button>
