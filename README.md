@@ -31,6 +31,7 @@
 
 ## ⚡ STACK TECNOLÓGICO
 
+
 <div align="center">
 
 | **TECNOLOGÍA** | **DESCRIPCIÓN** | **STATUS** |
