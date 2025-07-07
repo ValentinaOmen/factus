@@ -95,24 +95,16 @@ src/
 <div align="center">
 
 ```bash
-┌─[👨‍💻 hacker@terminal]─[~/BoxwareFront]
+┌─[👨‍💻 Clonar repositorio
 └──╼ git clone https://github.com/VictorRuiz1061/BoxwareFront.git
-[✓] Clonando repositorio...
-[✓] Descargando archivos...
-[✓] Repositorio clonado exitosamente
 
-┌─[👨‍💻 hacker@terminal]─[~/BoxwareFront]
+┌─[👨‍💻 Instalar dependencias
 └──╼ npm install
-[⚡] Instalando dependencias...
-[⚡] Resolviendo paquetes...
-[✓] Todas las dependencias instaladas
 
-┌─[👨‍💻 hacker@terminal]─[~/BoxwareFront]
+
+┌─[👨‍💻 Correr proyecto
 └──╼ npm run dev
-[🚀] Iniciando servidor de desarrollo...
-[🔥] Vite v5.0.0 iniciado
-[🌐] Local: http://localhost:5173
-[✅] ¡Servidor listo!
+
 ```
 
 </div>
@@ -125,13 +117,6 @@ src/
 
 <div align="center">
 
-```
-┌─[boxware@terminal]─[~/BoxwareFront]
-└──╼ npm run dev
-[✓] Servidor iniciado
-[✓] Módulos cargados
-[✓] Sistema operativo
-```
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=1500&pause=2000&color=00FF41&center=true&vCenter=true&width=400&lines=Sistema+BoxwareFront+Activo;Conexión+Segura+Establecida;Todos+los+Módulos+Online;Listo+para+Operaciones" alt="Final Status" />
