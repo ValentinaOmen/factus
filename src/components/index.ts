@@ -2,7 +2,6 @@
 
 // Re-export all component categories
 export * from './atomos';
-export * from './moleculas';
 export * from './organismos';
 
 // Note: We don't export pages or templates here as they are typically

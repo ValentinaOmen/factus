@@ -1,5 +1,5 @@
-import { useGetAuth } from '@/hooks/auth';
-import { hasValidToken } from '@/api/auth/token';
+import { useGetAuth } from '../hooks/auth/auth';
+import { isTokenValid } from '../api/auth/token';
 import { Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -10,13 +10,13 @@ interface ProtectedRouteProps {
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const { isAuthenticated, loading } = useGetAuth();
   const [isChecking, setIsChecking] = useState(true);
-  const [hasToken, setHasToken] = useState(false);
+  const [tokenValid, setTokenValid] = useState(false);
 
   useEffect(() => {
     // Verificación adicional de token válido
     const checkToken = () => {
-      const tokenValid = hasValidToken();
-      setHasToken(tokenValid);
+      const valid = isTokenValid();
+      setTokenValid(valid);
       setIsChecking(false);
     };
     
@@ -36,7 +36,7 @@ const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   }
 
   // Redireccionar si no está autenticado o no tiene token válido
-  if (!isAuthenticated || !hasToken) {
+  if (!isAuthenticated || !tokenValid) {
     console.log('Acceso denegado: Usuario no autenticado o token inválido');
     return <Navigate to="/" />;
   }
