@@ -23,11 +23,11 @@
 
 | **TECNOLOGÍA** | **DESCRIPCIÓN** | **STATUS** |
 |:---:|:---:|:---:|
-| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) | Interfaz reactiva y componentizada | ![Status](https://img.shields.io/badge/🟢-ACTIVO-brightgreen) |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) | Tipado estático para código robusto | ![Status](https://img.shields.io/badge/🟢-ACTIVO-brightgreen) |
-| ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) | Framework CSS utilitario | ![Status](https://img.shields.io/badge/🟢-ACTIVO-brightgreen) |
-| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) | Build tool ultra-rápido | ![Status](https://img.shields.io/badge/🟢-ACTIVO-brightgreen) |
-| ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white) | Tokens de autenticación segura | ![Status](https://img.shields.io/badge/🔒-SEGURO-red) |
+| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) | Interfaz reactiva y componentizada | ![Status](https://img.shields.io/badge/ACTIVO-brightgreen) |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) | Tipado estático para código robusto | ![Status](https://img.shields.io/badge/ACTIVO-brightgreen) |
+| ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) | Framework CSS utilitario | ![Status](https://img.shields.io/badge/ACTIVO-brightgreen) |
+| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) | Build tool ultra-rápido | ![Status](https://img.shields.io/badge/ACTIVO-brightgreen) |
+| ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white) | Tokens de autenticación segura | ![Status](https://img.shields.io/badge/SEGURO-red) |
 | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white) | Cliente HTTP para APIs | ![Status](https://img.shields.io/badge/🌐-CONECTADO-blue) |
 
 </div>
@@ -91,7 +91,7 @@ src/
 
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=1500&pause=2000&color=00FF41&center=true&vCenter=true&width=400&lines=Sistema+BoxwareFront+Activo;Conexión+Segura+Establecida;Todos+los+Módulos+Online;Listo+para+Operaciones" alt="Final Status" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=1500&pause=2000&color=00FF41&center=true&vCenter=true&width=400&lines=Sistema+Factus+Activo;Conexión+Segura+Establecida;Todos+los+Módulos+Online;Listo+para+Operaciones" alt="Final Status" />
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer" width="100%"/>
